@@ -1,0 +1,56 @@
+//This program is one-player game of battleship. Where the computer generates the board and places the ships
+//and then the player must guess the ship positions. In the game a '~' character represents ocean,
+//a '#' character represents a part of a ship, an 'H' character represents a place where a part of a
+//ship has been hit, and a ‘.’ character represents a miss.
+//Programmers: Sean Turner, Mohammad Azimi, James Yapnayon, Matthew Allen
+//Date 4.25.2021
+
+
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <iomanip>
+#include <fstream>
+//Pre:
+//Post:
+void Fire(char board);
+//Pre:
+//Post:
+void FleetSunk(char board, int&);
+
+using namespace std;
+
+main(){
+// Make a 10 x 10 array for gameboard
+// develop board.dat and move ready to assign the value to the board
+//form file
+// nested for loops to allocate chars in the text file to places in an array.
+// shots across every row
+//shots across every column
+// get character from "bfile.dat"
+//allocate that character to board[x][y]
+// Generate an int variable to control when to leave loop
+//requests the fire function, transient board by reference
+// requests the FleetSunk function transient board by value and FleetSunk by reference
+// ends loop vessels have been sunk
+// The Fire function yields in board[] by reference and uses it for the fire function
+//arranges the int x and y that will indicate row and column individually
+
+// switch statement to regulate what character is at board[x][y]
+
+// if vessel # then print 'Hit' and swap '#' with 'H'
+
+//orders to get if any of the areas nearby the spot has been hit before
+
+// only there is no ship next to the spot hit then show "hit"
+
+//  ocean~next display missed'.'
+
+// when 'H' then that means player has already hit this site.
+
+// checks game board for any #/ unhit ship pieces
+
+// no more ship left then return 
+// when no more # left FleetSunk = 1;
+    return 0;
+}
