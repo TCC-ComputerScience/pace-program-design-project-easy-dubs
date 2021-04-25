@@ -48,7 +48,7 @@ void InitArrays (/*OUT*/ char boardArray [ROWS] [COLS], /*OUT*/ char playerArray
 void SetLocation (/*IN*/ Ships currShip, /*IN*/ char direction, /*IN-OUT*/ char boardArray [ROWS][COLS]);
 
 // Sets the ship horizontally or vertically based on direction, randRow, and randCol values
-// Called directly inside of SetLocation
+// Called directly inside of SetLocation 
 // Pre: Same as SetLocation @entry but randRow and randCol have the first location of the ship,
 // shipSize has the number of spaces a ship will take up
 // Post: One of 5 ships will be stored in the array while ensuring the ships do not go out of bounds
