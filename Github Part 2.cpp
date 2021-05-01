@@ -36,6 +36,8 @@ struct TargetInfo
 	int column;
 };
 
+	
+
 // Sets up both arrays so they only have ocean ('~') spaces
 // Pre: boardArray and playerArray have been declared
 // Post: boardArray and playerArray have each element filled with '~'
@@ -89,7 +91,7 @@ int main()
 	// Setting up the Array - Most of this was based on my answer back in the Week 11 Discussion Board:
 	// Repeat these indented steps 5 times (One iteration per ship)
 		// Declare a Ships variable that begins with CARRIER and works its way through the list.
-		// Randomly generate a number (0 or 1) that makes the direction variable hold 'H' for Horizontal or 'V' for Vertical
+		// Randomly generate a number (0 or 1) that makes the direction variable hold 'X' for Horizontal or 'Y' for Vertical
 		// Call SetLocation
 			// Ideally in SetLocation, we should be grabbing a shipSize based on what I put near Ships' declaration
 			// We should also be randomly generating column and row values that keep the ship within the array
@@ -121,3 +123,28 @@ int main()
 
 	return 0;
 }
+// site of Array 
+void InitArray(char boardArray [ROWS] [COLS])
+{
+    //display water area
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++)
+            boardArray [i] [j] = '~';
+
+    return;
+}
+// Randomly generate a number (0 or 1) that makes the direction variable hold 'X' for Horizontal or 'Y' for Vertical
+void SetShip (char direction, char boardArray [ROWS][COLS], int randRow, int randCol, int shipSize)
+{
+    //ships can be placed X(horizontally)|| Y(vertically)    
+    if (direction == 'X')
+        for (int i = randCol; i < (randCol + shipSize); i++)
+            boardArray [randRow] [i] = '#';
+
+    else if (direction == 'Y')
+        for (int i = randRow; i < (randRow + shipSize); i++)
+            boardArray [i] [randCol] = '#';
+
+    return;
+}
+
